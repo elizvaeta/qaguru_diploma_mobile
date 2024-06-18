@@ -1,0 +1,6 @@
+.venv
+.idea
+allure-results
+.env.bstack
+.env.local_emulator
+.env.local_real
