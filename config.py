@@ -2,7 +2,7 @@ import os
 
 from appium.options.android import UiAutomator2Options
 from pydantic import BaseModel
-from utils.file import abs_path_from_project
+from wikipedia_tests.utils.file import abs_path_from_project
 
 
 class Config(BaseModel):

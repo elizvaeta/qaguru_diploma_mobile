@@ -3,7 +3,7 @@ import pytest
 from appium import webdriver
 from dotenv import load_dotenv
 from selene import browser
-from utils import attach
+from wikipedia_tests.utils import attach
 
 
 def pytest_addoption(parser):

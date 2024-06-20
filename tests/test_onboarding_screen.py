@@ -1,8 +1,12 @@
+import allure
 from pages.main_page import main_page
 from pages.onboarding_screen_page import onboarding_screen_page
 
 
-def test_getting_started():
+@allure.epic('Начальный экран')
+@allure.story('Просмотр начального экрана')
+@allure.title('Наличие страниц на начальном экране')
+def test_getting_started(self):
     onboarding_screen_page.should_have_first_window()
     onboarding_screen_page.press_continue_button()
 
