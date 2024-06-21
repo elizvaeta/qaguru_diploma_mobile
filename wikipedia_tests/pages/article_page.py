@@ -1,6 +1,6 @@
 import allure
 from appium.webdriver.common.appiumby import AppiumBy
-from selene import browser
+from selene import browser, have
 
 
 class ArticlePage:
@@ -24,6 +24,10 @@ class ArticlePage:
             self.return_button.click()
 
             browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/nav_tab_reading_lists')).click()
+
+    def should_have_title(self, title: str):
+        with allure.step(f'Проверка содержания значения "{title}" в заголовке'):
+            browser.element((AppiumBy.XPATH, f'//android.webkit.WebView[@text="{title}"]')).should(have.text(title))
 
 
 article_page = ArticlePage()
