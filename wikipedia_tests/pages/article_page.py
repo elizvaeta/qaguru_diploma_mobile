@@ -4,6 +4,10 @@ from selene import browser
 
 
 class ArticlePage:
+    @property
+    def return_button(self):
+        return browser.element((AppiumBy.ACCESSIBILITY_ID, 'Navigate up'))
+
     def save_to_favorite(self):
         with allure.step('Сохранение статьи в Избранное'):
             browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/page_save')).click()
@@ -16,8 +20,8 @@ class ArticlePage:
 
     def go_to_favorite(self):
         with allure.step('Переход в Избранное из статьи'):
-            browser.element((AppiumBy.ACCESSIBILITY_ID, 'Navigate up')).click()
-            browser.element((AppiumBy.ACCESSIBILITY_ID, 'Navigate up')).click()
+            self.return_button.click()
+            self.return_button.click()
 
             browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/nav_tab_reading_lists')).click()
 

@@ -1,7 +1,7 @@
 import allure
-from pages.main_page import main_page
-from pages.onboarding_screen_page import onboarding_screen_page
-from pages.search_page import search_page
+from wikipedia_tests.pages.main_page import main_page
+from wikipedia_tests.pages.onboarding_screen_page import onboarding_screen_page
+from wikipedia_tests.pages.search_page import search_page
 
 
 @allure.epic('Главная страница')
