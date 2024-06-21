@@ -118,13 +118,9 @@ allure serve tests/allure-results
 
 ![Тест-кейсы в Allure TestOps](/readme/allure_testops_2.png)
 
-В проекте также есть пример упавшего теста:
+Также есть задача в Jira для команды тестирования, в которую прилинкованы все написанные тест-кейсы:
 
-![Упавший тест](/readme/allure_testops_3.png)
-
-Не волнуйтесь, на него уже заведён баг:
-
-![Упавший тест в Jira](/readme/jira_1.png)
+![Задача Jira](/readme/jira_1.png)
 
 ### Telegram
 
